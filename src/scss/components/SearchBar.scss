@@ -1,0 +1,57 @@
+@import '../core/variables';
+@import '../core/reset';
+
+.search-bar {
+    background-color: $search-bar-background-color;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: $border-radius-small;
+    box-shadow: $inner-box-shadow;
+  
+    h2 {
+      color: $secondary-text-color;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      text-align: left;
+    }
+  
+    input[type="text"],
+    select {
+      padding: 12px;
+      border: 1px solid $input-border-color;
+      border-radius: $input-border-radius;
+      font-size: 1rem;
+      color: $secondary-text-color;
+      background-color: $input-background-color;
+      width: 100%;
+    }
+  
+    input[type="text"]::placeholder {
+      color: $placeholder-color;
+    }
+  
+    .ki-inputs {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+  
+      select {
+        flex-grow: 1;
+      }
+    }
+  
+    button[type="submit"] {
+      background-color: $button-primary-color;
+      color: $button-text-color;
+      border: none;
+      border-radius: $button-border-radius;
+      padding: 15px 20px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      align-self: flex-end;
+      margin-top: 15px;
+    }
+  }

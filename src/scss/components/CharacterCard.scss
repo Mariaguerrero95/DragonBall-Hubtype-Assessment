@@ -1,0 +1,87 @@
+@import '../core/variables';
+@import '../core/reset';
+
+.character-card {
+    display: flex;
+    flex-direction: column;
+    background-color: $card-background-color;
+    border-radius: $border-radius-small;
+    box-shadow: $card-box-shadow;
+    padding: 15px;
+    align-items: center;
+    text-align: center;
+    &.detailed {
+        align-items: center;
+        text-align: left;
+        padding: 20px;
+        border: 1px solid $detailed-border-color;
+        background-color: $detailed-background-color;
+        box-shadow: $detailed-box-shadow;
+        .character-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            object-fit: contain; 
+            background-color: #f0f0f0; 
+            box-shadow: $image-box-shadow;
+        }
+        .character-info {
+            width: 100%;
+            h3 {
+                font-size: 2rem;
+                margin-bottom: 10px;
+                color: $detailed-text-color;
+            }
+            p.description {
+                margin-bottom: 10px;
+                color: $detailed-info-color;
+                line-height: 1.6;
+            }
+            p strong {
+                font-weight: bold;
+                color: $detailed-text-color;
+            }
+        }
+        .ki-value {
+            display: none;
+        }
+    }
+    &:not(.detailed) {
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+
+        .character-image {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: contain; 
+            background-color: #f0f0f0; 
+            margin-right: 15px;
+            box-shadow: $thumbnail-box-shadow;
+        }
+        .character-info {
+            flex-grow: 1;
+            h3 {
+                margin: 0 0 5px 0;
+                font-size: 1.1rem;
+                color: $secondary-text-color;
+            }
+            p {
+                margin: 0;
+                font-size: 0.9rem;
+                color: $tertiary-text-color;
+                strong {
+                    color: $secondary-text-color;
+                }
+            }
+        }
+        .ki-value {
+            color: $accent-color;
+            font-weight: bold;
+            margin-left: auto;
+            font-size: 1rem;
+        }
+    }
+}

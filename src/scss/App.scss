@@ -1,3 +1,73 @@
 @import 'core/reset';
 @import 'core/variables';
 @import 'layout/main';
+@import './components/SearchBar';
+@import './components/SearchResults';
+@import './components/CharacterCard';
+
+.app-container {
+    font-family: $main-font;
+    background-color: $primary-background-color;
+    color: $primary-text-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+.app-header {
+    margin-bottom: 30px;
+    color: $header-text-color;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+}
+.app-main {
+    background-color: $secondary-background-color;
+    border-radius: $border-radius;
+    box-shadow: $main-box-shadow;
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+    .search-section,
+    .results-section,
+    .character-details-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+    .search-section h2 {
+    color: $secondary-text-color;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    text-align: left;
+}
+    .results-section h2 {
+    color: $secondary-text-color;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+.loading-message,
+.error-message,
+.no-results {
+    color: $tertiary-text-color;
+    font-style: italic;
+    text-align: center;
+    padding: 15px;
+}
+.back-button {
+    background-color: $button-secondary-color;
+    color: $button-text-color;
+    border: none;
+    border-radius: $button-border-radius;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
