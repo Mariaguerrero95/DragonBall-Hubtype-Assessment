@@ -2,7 +2,7 @@ import React from 'react';
 import "../scss/components/SearchBar.scss";
 
 function SearchBar() {
-    return <div>Search Bar</div>;
+    return <div></div>;
   }
   
   export default SearchBar;

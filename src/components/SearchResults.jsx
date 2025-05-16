@@ -3,7 +3,7 @@ import "../scss/components/SearchResults.scss";
 
 
 function SearchResults() {
-    return <div>Search Results</div>;
+    return <div></div>;
   }
   
   export default SearchResults;
